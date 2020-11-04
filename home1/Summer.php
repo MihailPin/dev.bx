@@ -4,7 +4,6 @@ $i=false;
 $f=false;
 $d=false;
 while ($i!=true) {
-
 	$quantity = readFromConsole('Введите количество цифр в последовательности');
 	if (is_numeric($quantity)){
 		$i=true;
@@ -15,7 +14,8 @@ while ($i!=true) {
 }
 
 while ($f!=true){
-$input = readFromConsole('Введите последовательность(с не нулевыми значениями, содержащую только цифры)');
+echo "Введите последовательность(с не нулевыми значениями, содержащую только цифры)\n";
+$input = trim(fgets(STDIN));
 $elem= explode(" ",$input);
 	for ($i=0; $i<=$quantity-1; $i++){
 		if(is_numeric($elem[$i])){
