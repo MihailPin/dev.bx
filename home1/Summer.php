@@ -4,7 +4,7 @@ $i=false;
 $f=false;
 $d=false;
 while ($i!=true) {
-	echo " \n";
+
 	$quantity = readFromConsole('Введите количество цифр в последовательности');
 	if (is_numeric($quantity)){
 		$i=true;
