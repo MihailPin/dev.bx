@@ -1,12 +1,12 @@
 <?php
+require 'read.php';
 $i=false;
 $f=false;
 $d=false;
 while ($i!=true) {
-	echo "Введите количество цифр в последовательности \n";
-	$quantity = trim(fgets(STDIN));
-	if (is_numeric($quantity)) {
-		$quantity =+$quantity;
+	echo " \n";
+	$quantity = readFromConsole('Введите количество цифр в последовательности');
+	if (is_numeric($quantity)){
 		$i=true;
 	} else {
 		echo "Ошибка введенные данные не являются числом\n";
@@ -15,8 +15,7 @@ while ($i!=true) {
 }
 
 while ($f!=true){
-echo "Введите последовательность(с не нулевыми значениями, содержащую только цифры)\n";
-$input = trim(fgets(STDIN));
+$input = readFromConsole('Введите последовательность(с не нулевыми значениями, содержащую только цифры)');
 $elem= explode(" ",$input);
 	for ($i=0; $i<=$quantity-1; $i++){
 		if(is_numeric($elem[$i])){
