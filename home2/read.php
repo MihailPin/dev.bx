@@ -19,7 +19,7 @@ function readFromConsole (string $qestion)
  }
  else if ($input=='!stop')
  {
-	 $input = '';
+	 $input = null;
  }
  else
  {
