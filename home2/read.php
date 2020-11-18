@@ -1,36 +1,22 @@
 <?php
-require_once ('test.php');
-$test=readFromConsole('Если хотите заустить тестирование введите test');
-function readFromConsole (string $qestion)
+ require_once ('test.php');
+function readFromConsole($input = '')
 {
- echo $qestion.' : ';
- $input = trim(fgets(STDIN));
- if ($input=='test')
- {
-	readTest();
- }
- else if ($input == 'true')
- {
- 	$input= true;
- }
- else if ($input == 'false')
- {
- 	$input= false;
- }
- else if (is_numeric($input))
- {
- 	$input = +$input;
- }
- else if ($input=='!stop')
- {
-	 $input = null;
- }
- else
- {
- 	$input = (string)$input;
- }
-
-
-
- return $input;
+	if($input == '')
+	{
+		$input = trim(fgets(STDIN));
+	}
+	switch ($input)
+	{
+		case 'true':
+			return true;
+		case 'false':
+			return false;
+		case '!stop':
+			return 'null';
+		case is_numeric($input):
+			return +$input;
+		default:
+			return (string)$input;
+	}
 }

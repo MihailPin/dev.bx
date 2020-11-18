@@ -14,16 +14,29 @@ require_once ('read.php');
 
 function readTest()
 {
-	$result = readFromConsole('Введите true', true);
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === true ? ' passed '.PHP_EOL : ' failed '.PHP_EOL);
-	$result = readFromConsole('Введите false', false);
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === false ? ' passed'.PHP_EOL : ' failed'.PHP_EOL);
-	$result = readFromConsole('Введите !stop', '!stop');
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === null ? ' passed'.PHP_EOL : ' failed'.PHP_EOL);
-	$result = readFromConsole('Введите 1.3', 1.3);
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === 1.3 ? ' passed'.PHP_EOL : ' failed'.PHP_EOL);
-	$result = readFromConsole('Введите 1', 1);
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === 1 ? ' passed'.PHP_EOL : ' failed'.PHP_EOL);
-	$result = readFromConsole('Введите test', 'test');
-	echo 'Результат теста ' .var_export($result,true).var_dump($result). ($result === 'test' ? ' passed'.PHP_EOL : ' failed'.PHP_EOL);
+	$result=readFromConsole('true');
+	echo '1) Результат функции: '.var_export($result, true).
+		PHP_EOL.' Ожидаемый результат: true'.PHP_EOL;
+	echo ($result === true ? ' passed' : ' failed').PHP_EOL;
+
+	$result=readFromConsole('false');
+	echo '2) Результат функции: '.var_export($result, true).
+		PHP_EOL.' Ожидаемый результат: false'.PHP_EOL;
+	echo ($result === false ? ' passed' : ' failed').PHP_EOL;
+
+	$result=readFromConsole('!stop');
+	echo '3) Результат функции: '.$result.PHP_EOL.' Ожидаемый результат: null'.PHP_EOL;
+	echo ($result === 'null' ? ' passed' : ' failed').PHP_EOL;
+
+	$result=readFromConsole('1.3');
+	echo '4) Результат функции: '.$result.PHP_EOL.' Ожидаемый результат: 1.3'.PHP_EOL;
+	echo ($result === 1.3 ? ' passed' : ' failed').PHP_EOL;
+
+	$result=readFromConsole('1');
+	echo '5) Результат функции: '.$result.PHP_EOL.' Ожидаемый результат: 1'.PHP_EOL;
+	echo ($result === 1 ? ' passed' : ' failed').PHP_EOL;;
+
+	$result=readFromConsole('test');
+	echo '6) Результат функции: '.$result.PHP_EOL.' Ожидаемый результат: test'.PHP_EOL;
+	echo ($result === 'test' ? ' passed' : ' failed').PHP_EOL;
 }
