@@ -1,11 +1,15 @@
 <?php
 require_once ('test.php');
-readTest();
+$test=readFromConsole('Если хотите заустить тестирование введите test');
 function readFromConsole (string $qestion)
 {
  echo $qestion.' : ';
  $input = trim(fgets(STDIN));
- if ($input == 'true')
+ if ($input=='test')
+ {
+	readTest();
+ }
+ else if ($input == 'true')
  {
  	$input= true;
  }
@@ -25,6 +29,8 @@ function readFromConsole (string $qestion)
  {
  	$input = (string)$input;
  }
+
+
+
  return $input;
 }
-
