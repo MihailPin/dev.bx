@@ -1,0 +1,18 @@
+*{
+	box-sizing: border-box;
+}
+body{margin: 0;}
+
+section{
+	width: 100%;
+}
+
+section.first-section{
+	background: rgba(51, 51, 51, 0.05);
+	border-bottom: 1px solid rgba(51, 51, 51, 0.05);
+}
+container{
+	width: 1440px;
+	padding: 30px;
+	max-width: 100%;
+}
