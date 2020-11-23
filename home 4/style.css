@@ -1,0 +1,128 @@
+*{
+	box-sizing: border-box;
+}
+body{margin: 0; }
+
+.section{
+	width: 100%;
+}
+.container{
+	width: 1440px;
+	height: 1711px;
+	padding: 30px;
+	max-width: 100%;
+
+}
+
+.section.first-section{
+	background: rgba(0,101,242, 0.12);
+	border-bottom: 1px solid rgba(0,101,242, 0.12);
+}
+h1{
+	width: 540px;
+	height: 96px;
+	text-align: center;
+	letter-spacing: -0.5px;
+	font:bold 40px/48px Helvetica Neue, 	"Open Sans", sans-serif;
+	margin-top: 30px;
+	margin-left:calc(50% - 540px/2);
+
+}
+h2 {
+	width: 540px;
+	height: 84px;
+	font: 18px/28px Helvetica Neue, "Open Sans", sans-serif;
+	letter-spacing: 0.1px;
+	text-align: center;
+	margin-top: 24px;
+	margin-left:calc(50% - 540px/2);
+
+}
+.vector{
+	width: 91.55px;
+	height: 22.67px;
+	margin-top: 315.12px;
+	margin-left:calc(50% - 91.55px/2 - 154.23px);
+
+}
+.vector1{
+	width: 43.7px;
+	height: 45px;
+	margin-top: 315.12px;
+	margin-left: 34.87px;
+
+}
+.logo{
+	width: 51.11px;
+	height: 24.04px;
+	margin-top: 315.12px;
+	margin-left: 34.87px;
+}
+.logo1{
+	width: 109.63px;
+	height: 16.53px;
+	margin-top: 315.12px;
+	margin-left: 34.87px;
+}
+h3{
+	width: 445px;
+	height: 120px;
+	margin-left: calc(50% - 445px/2 - 332.5px);
+	margin-top: 100px;
+	font:bolder 56px/60px Helvetica Neue;
+}
+p{
+	font: 18px/28px Helvetica Neue;
+}
+.video {
+	background: url(logo/Overlay.svg);
+	mix-blend-mode: normal;
+	position: absolute;
+
+	margin-left: 720px;
+}
+.text{
+	width: 445px;
+	height: 84px;
+	margin-left: calc(50% - 445px/2 - 332.5px);
+	margin-top: 24px;
+
+}
+h4{
+	width: 1110px;
+	height: 32px;
+	margin-left: 165px;
+	bottom: 730px;
+	font:bold 24px/32px Helvetica Neue;
+	font-style: normal;
+	text-align: left;
+}
+h5{
+	width: 1110px;
+	height: 28px;
+	margin-left: 165px;
+	bottom: 662px;
+	font: 650 18px/28px Helvetica Neue;
+	font-style: normal;
+	font-size: 18px;
+}
+.text1{
+	width: 1110px;
+	height: 72px;
+	margin-top: 16px;
+	margin-left: 165px;
+	bottom: 574px;
+	font:400 16px/24px Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+}
+.dot{
+	margin-top: 72px;
+	margin-bottom: 4px;
+	height: 24px;
+}
+.dot1{
+	height: 24px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
