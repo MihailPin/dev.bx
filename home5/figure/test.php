@@ -1,5 +1,5 @@
 <?php
-require_once 'figures.php';
+require_once 'figure.php';
 function test()
 {
 	echo 'Проверка Ладьи'.PHP_EOL;
