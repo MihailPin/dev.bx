@@ -95,7 +95,7 @@ $eventBus->subscribe(
 $eventBus->subscribe(
 	User::EVENT_ON_USER_DELETE,
 	function(User $user) use ($mailer){
-		$mailer->sendMessage("Welcome dear{$user->getName()}");
+		$mailer->sendMessage("Welcome dear {$user->getName()}");
 	}
 );
 
