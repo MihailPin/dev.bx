@@ -1,46 +1,29 @@
 <?php
 
+
 function analize($input)
 {
-	$list = ['dirs'=>[],'files'=>[]];
+	$list =(['folders'=>[],'files'=>[]]);
 	$currentDir = opendir($input);
 	while ($element = readdir($currentDir)) {
 		if (in_array($element, ['.', '..'])) {
 			continue;
 		}
-
 		if (is_dir($element)) {
-			$list['dirs'][$element][] = 'is folder';
-
-			if (is_readable($element)) {
-				$list['dirs'][$element][] = 'is readable true';
-			} else {
-				$list['dirs'][$element][] = 'is readable false';
-			}
-			if (is_writable($element)) {
-				$list['dirs'][$element][] = 'is writable true';
-			} else {
-				$list['dirs'][$element][] = 'is readable false';
-			}
+			$list['folders'][$element]['is_readable'] =
+				(is_readable($element) == true ? 'true' : 'false');
+			$list['folders'][$element]['is_writable'] =
+				(is_writable($element) == true ? 'true' : 'false');
 		}
 		if (is_file($element)) {
-			$list['files'][$element][] = 'is file';
-
-			if (is_readable($element)) {
-				$list['files'][$element][] = 'is readable true';
-			} else {
-				$list['files'][$element][] = 'is readable false';
-			}
-			if (is_writable($element)) {
-				$list['files'][$element][] = 'is writable true';
-			} else {
-				$list['files'][$element][] = 'is readable false';
-			}
-			$size = filesize($element);
-			$list['files'][$element][] = $size;
+			$list['files'][$element]['is_readable'] =
+				(is_readable($element) == true ? 'true' : 'false');
+			$list['files'][$element]['is_writeable'] =
+				(is_writeable($element) == true ? 'true' : 'false');
+			$list['files'][$element]['filesize'] = filesize($element);
 		}
 	}
 	closedir($currentDir);
+	return $list;
 
-	print_r($list);
 }
