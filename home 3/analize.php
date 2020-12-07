@@ -24,6 +24,6 @@ function analize($input)
 		}
 	}
 	closedir($currentDir);
-	return $list;
+	print_r($list);
 
 }
