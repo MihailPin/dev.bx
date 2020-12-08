@@ -11,6 +11,7 @@ if ($input=='testing')
 else
 {
 	analize($input);
+
 }
 
 
